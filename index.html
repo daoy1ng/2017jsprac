@@ -19,7 +19,7 @@
 </ul>
 <script type="text/javascript">
     var aqiData=[
-        ["北京",90],
+        ["北京",80],
         ["上海",50],
         ["福州",10],
         ["广州",50],
@@ -46,6 +46,24 @@
          遍历读取aqiData中各个城市的数据
          将空气质量指数大于60的城市显示到aqi-list的列表中
          */
+        //获取空气分数大于60的数组
+        var kqList=[];
+        for(var i=0;i<aqiData.length;i++){
+            if(aqiData[i][1]>60){
+                kqList.push(aqiData[i]);
+            }
+        }
+        //逆序,数组里面只有城市名字吗？不是。  貌似aqiData[i]就代表了二维数组
+        kqList.sort(function (a,b) {
+            return b[1]-a[1];
+        });
+        //输出数组里面的内容
+        var cont=document.getElementById("aqi-list");
+        for(var j=0;j<kqList.length;j++){
+            var newnode=document.createElement("li");
+            newnode.innerHTML="第"+(j+1)+"名："+kqList[j][0]+",得分："+kqList[j][1];
+            cont.appendChild(newnode);
+        }
     })();
 </script>
 </body>
