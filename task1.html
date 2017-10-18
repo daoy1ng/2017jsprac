@@ -38,7 +38,23 @@ function getData() {
   /*
   coding here
   */
-
+  //      获取节点内容进行字符串切割 or  获取节点按照节点次序 下面注释是后者
+//        var dataList=[];// 先声明存放数据的一维数组
+//        var li=document.getElementById("source").childNodes;
+//        //删除li节点数组中非节点元素（空文本节点）
+//        for(var i=0;i<li.length;i++){
+//            var node=li[i];
+//            if(node.nodeType!=1){
+//                node.parentNode.removeChild(node);
+//            }
+//        }
+//        //将列表中的空气质量信息放入二维数组dataList中
+//        for(var i=0;i<li.length;i++){
+//            dataList[i]=[];// 2 再声明存放数据的二维数组
+//            dataList[i][0]=li[i].firstChild.textContent;//空气质量文本信息
+//            dataList[i][1]=li[i].lastChild.innerHTML;//空气质量值
+//        }
+//        return dataList;
   /*
   data = [
     ["北京", 90],
