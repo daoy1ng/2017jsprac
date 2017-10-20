@@ -55,6 +55,15 @@ function getData() {
 //            dataList[i][1]=li[i].lastChild.innerHTML;//空气质量值
 //        }
 //        return dataList;
+  var city = document.querySelectorAll('#source>li');
+        var data=[];
+        for(var i=0;i<city.length;i++){
+            var text=city[i].innerText;
+//            这里使用substr(start,length),第一个参数是要抽取子串的起始下标，负数从末尾算起。第二个参数为抽取的子串的长度，-2是指从倒数第二个往前数两个
+            var node=[text.substr(0,2),text.substr(-2,2)];
+            data.push(node);
+        }
+        return data;
   /*
   data = [
     ["北京", 90],
