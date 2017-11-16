@@ -1,0 +1,12 @@
+//20171116 手写的第一个文档类
+package
+{
+	import flash.display.MovieClip;
+	public class HelloWorld extends MovieClip
+	{
+		public function HelloWorld()
+		{
+			trace("Hello,world");
+		}
+	}
+}
