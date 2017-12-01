@@ -10,7 +10,7 @@ package
 		}
 	}
 }
-//字典:创建一个简单Dictionary类的实例
+//20171131 字典:创建一个简单Dictionary类的实例
 //使用这个dictionary实例实现一个电子邮件地址簿
 var dictionary=new Dictionary();
 dictionary.set('zhangsan','123@163.com');
@@ -18,4 +18,13 @@ dictionary.set('lisi','123@qq.com');
 
 this.set=function(key,value){
     items[key]=value;
+}
+//20171201 "loe lose"散列函数
+//给定一个key参数，根据key每个字符ASCII码值得和
+var loseloseHashCode=function(key){
+    var hash=0;
+    for(var i=0;i<key.length;i++){
+        hash+=key.charCodeAt(i);
+    }
+    return hash%37;//任意数做除法得余数，得到一个较小的值	
 }
