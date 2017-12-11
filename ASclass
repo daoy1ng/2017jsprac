@@ -19,7 +19,7 @@ dictionary.set('lisi','123@qq.com');
 this.set=function(key,value){
     items[key]=value;
 }
-//20171201 "loe lose"散列函数
+//20171201 "lose lose"散列函数
 //给定一个key参数，根据key每个字符ASCII码值得和
 var loseloseHashCode=function(key){
     var hash=0;
