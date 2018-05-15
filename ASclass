@@ -34,4 +34,5 @@ var loseloseHashCode=function(key){
 3.这里表示已完成项 √
 4.阅读《高性能网站建设指南》系列书本(60%) 进阶先作罢
 5.ajax 回调 （1%）
-6.lazyload（20%）滚动监听+滚动加载（evernote）学习
+6.lazyload（20%）注：滚动监听+滚动加载（evernote）学习
+7.vue（10%）
